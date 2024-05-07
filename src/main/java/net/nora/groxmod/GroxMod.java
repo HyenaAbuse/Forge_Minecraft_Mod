@@ -13,6 +13,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.nora.groxmod.block.ModBlocks;
+import net.nora.groxmod.item.ModCreativeModTabs;
 import net.nora.groxmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -28,7 +30,10 @@ public class GroxMod {
     public GroxMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -48,6 +53,7 @@ public class GroxMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.CUP);
             event.accept(ModItems.PILOT);
+            event.accept(ModItems.DESPAIR);
         }
 
     }

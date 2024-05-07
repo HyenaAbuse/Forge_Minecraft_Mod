@@ -1,5 +1,10 @@
 {
   "item.groxmod.cup": "Cup",
-  "item.groxmod.pilot": "Pilot"
+  "item.groxmod.pilot": "Pilot",
+  "item.groxmod.despair": "Despair",
+
+  "block.groxmod.furry_block": "Cuteness Block",
+
+  "creativetab.grox_tab": "Super Awesome Tab"
 
 }
